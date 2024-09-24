@@ -25,9 +25,9 @@
   </head>
   <body class="lexend-font">
     <header class="w-full z-50 top-0 fixed backdrop-blur-lg bg-white/70">
-      <div class="navbar px-3  bg-[#f9f2e4]">
+      <div class="navbar lg:px-24  bg-[#f9f2e4]">
         <div class="navbar-start">
-          <button class="rounded-xl  h-12 w-32 hover:bg-white hover:scale-95 font-bold bg-[#B4F461]">Blog</button>
+          <button id="blogButton" class="rounded-xl  h-12 w-32 hover:bg-white hover:scale-95 font-bold bg-[#B4F461]">Blog</button>
         </div>
         <div class="navbar-center">
           <img class="w-5 mx-1" src="assets/logo.png" alt="" />
@@ -35,15 +35,25 @@
         </div>
         <div class="navbar-end">
           <img class="mx-1" src="assets/coin.png" alt="">
-          <h1> <span>8000</span>BDT</h1>
+          <h1> <span id="mainBalance">28000</span> BDT</h1>
         </div>
       </div>
       <div class="pt-10 flex space-x-5 justify-center">
-        <button class="rounded-xl  h-12 w-32 bg-[#B4F461] font-bold hover:scale-95">Donation</button>
-        <button class="rounded-xl text-[#111111B3] font-semibold hover:scale-95 cursor-pointer h-12 w-32 bg-[#111111] bg-opacity-30">History</button>
+        <button id="donationBtnColorChange" class="rounded-xl border  h-12 w-32 bg-[#B4F461] font-bold hover:scale-95">Donation</button>
+        <button id="historyBtnColorChange" class="rounded-xl text-[#111111B3] font-semibold hover:scale-95 cursor-pointer h-12 w-32 border">History</button>
       </div>
     </header>
     <main class="h-screen my-40 lg:mx-20 space-y-8 bottom-10">
+      <div id="successModal" class="hidden fixed inset-0 flex justify-center  items-center bg-black bg-opacity-50">
+        <div class="bg-white text-center w-1/3  grid grid-rows-3 justify-center items-center p-10 rounded-lg shadow-lg">
+            <h1 class="text-5xl font-bold">Congrates!</h1>
+            <img class="mx-auto w-8 pt-5" src="assets/coin.png" alt="">
+            <p class="opacity-50">You Have Donated for Humankind</p>
+            <h1 class="text-3xl font-bold">successfully</h1>
+            <button class="mt-4 px-4 py-2 bg-[#9d9d9d] text-white rounded" onclick="closeModal()">Close Confirmation</button>
+        </div>
+    </div>
+
       <div class="flex pt-5 justify-center items-center ">
         <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border ">
           
@@ -57,7 +67,7 @@
             <div>
               <div class="flex text-center bg-[#1111110D] w-32 h-11 rounded-lg">
                 <img class="mx-1 pt-2 w-5 h-8 inline" src="assets/coin.png" alt="">
-                <h1 class="pt-2 inline"> <span>3000 </span>BDT</h1>
+                <h1 class="pt-2 inline"> <span id="noakhaliBalance">3000 </span> BDT</h1>
               </div>
             </div>
             <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -67,9 +77,9 @@
               Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 
               <div class="form-control pt-6">
-                <input type="number" placeholder="Write Donation Amount" class="input input-bordered" />
+                <input id="donateNowInputNoakhali" type="number" placeholder="Write Donation Amount" class="input input-bordered" />
                 </div>
-              <button class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
+              <button id="donateNowNoakhali" class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
         </div>
       </div>
       </div>
@@ -97,9 +107,9 @@
               Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 
               <div class="form-control pt-6">
-                <input type="number" placeholder="Write Donation Amount" class="input input-bordered" />
+                <input id="donateNowInputFeni" type="number" placeholder="Write Donation Amount" class="input input-bordered" />
                 </div>
-              <button class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
+              <button id="donateNowFeni" class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
         </div>
       </div>
       </div>
@@ -128,9 +138,9 @@
               Please consider making a donation to support these brave individuals in their time of need.</p>
                 
               <div class="form-control pt-6">
-                <input type="number" placeholder="Write Donation Amount" class="input input-bordered" />
+                <input id="donateNowInputAid" type="number" placeholder="Write Donation Amount" class="input input-bordered" />
                 </div>
-              <button class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
+              <button id="donateNowAid" class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
         </div>
       </div>
       </div>
@@ -141,5 +151,8 @@
     
     
     <script src="JS/index.js"></script>
+    <script src="JS/noakhali.js"></script>
+    <script src="JS/feni.js"></script>
+    <script src="JS/aid.js"></script>
   </body>
 </html>
