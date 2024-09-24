@@ -14,6 +14,8 @@ document
 
     if (donateNowInputNoakhali > mainBalance) {
       alert("Insufficient Balance for donation.");
+      document.getElementById("donateNowInputNoakhali").value = "";
+
       return;
     }
 

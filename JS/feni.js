@@ -15,13 +15,14 @@ document
     );
     if (donateNowInputFeni > mainBalance) {
       alert("Insufficient Balance for donation.");
+      document.getElementById("donateNowInputFeni").value = "";
+
       return;
     }
     if (isNaN(donateNowInputFeni) || donateNowInputFeni <= 0) {
       alert("invalid amount for donation.");
     } else if ((mainBalance) => donateNowInputFeni) {
       const newBalanceFeni = donateNowInputFeni + balanceFeni;
-
 
       document.getElementById("feniBalance").innerText = newBalanceFeni;
 

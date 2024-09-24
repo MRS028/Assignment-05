@@ -16,6 +16,8 @@ document
 
     if (donateNowInputAid > mainBalance) {
       alert("Insufficient Balance for donation.");
+      document.getElementById("donateNowInputAid").value = "";
+
       return;
     }
 
