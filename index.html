@@ -43,10 +43,10 @@
         <button id="historyBtnColorChange" class="rounded-xl text-[#111111B3] font-semibold hover:scale-95 cursor-pointer h-12 w-32 border">History</button>
       </div>
     </header>
-    <main class="h-screen my-40 lg:mx-20  bottom-10">
+    <main class="my-40 lg:mx-20 flex-grow">
       <!-- Modal Portion -->
-      <div id="successModal" class="hidden fixed inset-0 flex justify-center  items-center bg-black bg-opacity-50">
-        <div class="bg-white text-center lg:w-1/3  grid grid-rows-3 justify-center items-center p-10 rounded-2xl shadow-lg">
+      <div id="successModal" class="hidden fixed z-50 inset-0 flex justify-center  items-center bg-black bg-opacity-50">
+        <div class="bg-white text-center lg:w-1/3 grid grid-rows-3 justify-center items-center p-10 rounded-2xl shadow-lg">
             <h1 class="text-5xl font-bold">Congrates!</h1>
             <img class="mx-auto w-8 pt-5" src="assets/coin.png" alt="">
             <p class="opacity-50 font-bold">You Have Donated for Humankind</p>
@@ -60,11 +60,11 @@
     </div>
 
 
-      <div id="donationChange" class="space-y-10">
+      <div id="donationChange" class="space-y-16">
                     <!-- Donate Noakhali -->
 
         <div class="flex pt-5 justify-center items-center ">
-          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border ">
+          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border-2 ">
             
               <div>
                 <img class="w-auto "
@@ -94,7 +94,7 @@
         </div>
                      <!-- Donate Feni -->
         <div class="flex justify-center items-center">
-          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border border-[]">
+          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border-2">
             
               <div>
                 <img class="w-auto "
@@ -123,8 +123,8 @@
         </div>
         </div>
                       <!-- Donate Aid -->
-        <div class="flex justify-center items-center mb-10 pb-12">
-          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border border-[]">
+        <div class="flex justify-center items-center ">
+          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border-2">
             
               <div>
                 <img class="w-auto "
@@ -154,21 +154,47 @@
           </div>
         </div>
         </div>
-
-
-
-
+        <!-- Donate for Palastine -->
+        <div class="flex justify-center items-center ">
+          <div class="card-body justify-center rounded-lg lg:card-side bg-base-100 border-2">
+            
+              <div>
+                <img class="w-auto "
+                src="assets/donategaza.jpg"
+                alt="Album" />
+              </div>
+            
+            <div class="card-body lg:w-2/3">
+              <div>
+                <div class="flex text-center bg-[#1111110D] w-32 h-11 rounded-lg">
+                  <img class="mx-1 pt-2 w-5 h-8 inline" src="assets/coin.png" alt="">
+                  <h1 class="pt-2 inline"> <span id="gazaBalance">8000 </span> BDT</h1>
+                </div>
+              </div>
+              <h2 class="card-title">Donate for Gaza, Palestine</h2>
+              <p> This is a critical moment for Gaza. Stand in solidarity with its residents during their darkest hour.
+                 Support our on-the-ground team with your donation now and help make a meaningful difference.This is why we’re reaching out for
+                  your invaluable support. Your generosity can significantly transform the lives of those struggling in Palestine. 
+                 Your aid will enable us to deliver critical healthcare, nutritious food, clean water, and first aid to the ones desperately needing it.</p>
+                  
+                <div class="form-control pt-6">
+                  <input id="donateNowInputGaza" type="number" placeholder="Write Donation Amount" class="input input-bordered" />
+                  </div>
+                <button id="donateNowGaza" class="btn bg-[#B4F461] text-[#111111] font-bold hover:scale-95 text-xl">Donate Now</button>
+          </div>
+        </div>
+        </div>
       </div>
     </main>
-    <footer class="">
-
+    <footer class="footer footer-center bg-base-300 text-base-content p-3">
+      <aside>
+        <p>Copyright ©2024- All right reserved PH</p>
+      </aside>
     </footer>
-    
-    
     <script src="JS/index.js"></script>
     <script src="JS/noakhali.js"></script>
     <script src="JS/feni.js"></script>
     <script src="JS/aid.js"></script>
-    <script src="JS/test.js"></script>
+    <script src="JS/gaza.js"></script>
   </body>
 </html>

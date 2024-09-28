@@ -23,6 +23,7 @@ document
 
     if (isNaN(donateNowInputAid) || donateNowInputAid <= 0) {
       alert("invalid amount for donation.");
+      document.getElementById("donateNowInputFeni").value = "";
     } else if ((mainBalance) => donateNowInputAid) {
       const newBalanceAid = donateNowInputAid + balanceAid;
 
@@ -56,7 +57,7 @@ document
 
       div.innerHTML = `
         <div class="space-y-4 my-5"> 
-          <p>${donateNowInputAid} Taka is Donated for Aid for Injured in the Quota Movement.</p> 
+          <p class="font-bold">${donateNowInputAid} Taka is Donated for Aid for Injured in the Quota Movement.</p> 
           <p>Date: ${dateTime} (Bangladesh Standard Time)</p>
         </div>
       `;
@@ -65,6 +66,7 @@ document
 
     } else {
       alert("Not enough balance for donation.");
+      document.getElementById("donateNowInputFeni").value = "";
     }
 
   });

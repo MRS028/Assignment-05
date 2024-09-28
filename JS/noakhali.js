@@ -21,6 +21,7 @@ document
 
     if (isNaN(donateNowInputNoakhali) || donateNowInputNoakhali <= 0) {
       alert("invalid amount for donation.");
+      document.getElementById("donateNowInputFeni").value = "";
     } else if ((mainBalance) => donateNowInputNoakhali) {
       const newBalanceNoakhali = donateNowInputNoakhali + balanceNoakhali;
 
@@ -54,7 +55,7 @@ document
 
       div.innerHTML = `
         <div class="space-y-4 my-5"> 
-          <p>${donateNowInputNoakhali} Taka is Donated for Donate for Flood at Noakhali,Bangladesh.</p> 
+          <p class="font-bold>${donateNowInputNoakhali} Taka is Donated for Donate for Flood at Noakhali,Bangladesh.</p> 
           <p>Date: ${dateTime} (Bangladesh Standard Time)</p>
         </div>
       `;
@@ -62,6 +63,7 @@ document
       document.getElementById("historyShow").appendChild(div);
     } else {
       alert("Not enough balance for donation.");
+      document.getElementById("donateNowInputFeni").value = "";
     }
   });
 function closeModal() {
