@@ -55,7 +55,7 @@ document
 
       div.innerHTML = `
         <div class="space-y-4 my-5"> 
-          <p class="font-bold>${donateNowInputNoakhali} Taka is Donated for Donate for Flood at Noakhali,Bangladesh.</p> 
+          <p class="font-bold">${donateNowInputNoakhali} Taka is Donated for Donate for Flood at Noakhali,Bangladesh.</p> 
           <p>Date: ${dateTime} (Bangladesh Standard Time)</p>
         </div>
       `;
